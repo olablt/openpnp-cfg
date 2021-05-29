@@ -1,0 +1,31 @@
+<openpnp-board version="1.1" name="demo.board.xml">
+   <dimensions units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+   <fiducials/>
+   <placements>
+      <placement version="1.2" id="1" side="Top" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" type="Place" check-fids="false">
+         <location units="Millimeters" x="94.1" y="129.9" z="0.0" rotation="90.0"/>
+      </placement>
+      <placement version="1.2" id="02" side="Top" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" type="Place" check-fids="false">
+         <location units="Millimeters" x="88.40000000000003" y="130.8" z="0.0" rotation="71.0"/>
+      </placement>
+      <placement version="1.2" id="03" side="Top" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" type="Place" check-fids="false">
+         <location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+      </placement>
+      <placement version="1.2" id="04" side="Top" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" type="Place" check-fids="false">
+         <location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+      </placement>
+      <placement version="1.2" id="05" side="Top" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" type="Place" check-fids="false">
+         <location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+      </placement>
+      <placement version="1.2" id="06" side="Top" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" type="Place" check-fids="false">
+         <location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+      </placement>
+      <placement version="1.2" id="07" side="Top" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" type="Place" check-fids="false">
+         <location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+      </placement>
+      <placement version="1.2" id="08" side="Top" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" type="Place" check-fids="false">
+         <location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+      </placement>
+   </placements>
+   <solder-paste-pads/>
+</openpnp-board>

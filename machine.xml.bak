@@ -75,10 +75,20 @@
                </nozzle>
             </nozzles>
             <actuators>
-               <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="ACT1615654949295" name="H1VAC" index="0">
+               <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="A1" name="A1" index="0">
                   <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
                   <safe-z value="0.0" units="Millimeters"/>
                </actuator>
+<actuator class="org.openpnp.machine.reference.ReferenceActuator" id="actAutoFeeder4mm" name="AutoFeeder_4mmAdvance" index="0">
+</actuator>
+<actuator class="org.openpnp.machine.reference.ReferenceActuator" id="actAutoFeeder8mm" name="AutoFeeder_8mmAdvance" index="1">
+</actuator>
+<actuator class="org.openpnp.machine.reference.ReferenceActuator" id="actAutoFeeder12mm" name="AutoFeeder_12mmAdvance" index="2">
+</actuator>
+<actuator class="org.openpnp.machine.reference.ReferenceActuator" id="actAutoFeederPostPick" name="AutoFeeder_PostPick" index="3">
+</actuator>
+<actuator class="org.openpnp.machine.reference.ReferenceActuator" id="actAutoFeederEnable" name="AutoFeeder_Enable" index="4">
+</actuator>
             </actuators>
             <cameras>
                <camera class="org.openpnp.machine.reference.camera.OpenPnpCaptureCamera" id="CAM1611515673521" name="OpenPnpCaptureCamera" looking="Down" settle-time-ms="250" rotation="0.0" flip-x="false" flip-y="false" offset-x="0" offset-y="0" crop-width="0" crop-height="0" scale-width="0" scale-height="0" deinterlace="false" unique-id="UVC Camera (046d:0825) usb-0000:00:14.0-4.1.1" format-id="36" fps="10.0">
@@ -93,7 +103,7 @@
                   <back-light-compensation property="BackLightCompensation" value="0"/>
                   <brightness property="Brightness" value="152"/>
                   <contrast property="Contrast" value="66"/>
-                  <exposure property="Exposure" value="207" auto="false"/>
+                  <exposure property="Exposure" value="167" auto="false"/>
                   <focus property="Focus"/>
                   <gain property="Gain"/>
                   <gamma property="Gamma"/>
@@ -101,7 +111,7 @@
                   <power-line-frequency property="PowerLineFrequency" value="1"/>
                   <saturation property="Saturation" value="60"/>
                   <sharpness property="Sharpness" value="3"/>
-                  <white-balance property="WhiteBalance" value="2300" auto="true"/>
+                  <white-balance property="WhiteBalance" value="2460" auto="true"/>
                   <zoom property="Zoom"/>
                </camera>
             </cameras>
@@ -114,17 +124,15 @@
       </heads>
       <signalers/>
       <feeders>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceAutoFeeder" id="autofeeder0" name="auto_id0_8mm-R-10k" enabled="true" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" retry-count="3" actuator-name="AutoFeeder_4mmAdvance" actuator-type="Double" actuator-value="4.0" post-pick-actuator-name="AutoFeeder_PostPick" post-pick-actuator-type="Double" post-pick-actuator-value="4.0">
-            <location units="Millimeters" x="136.0" y="-8.8" z="-19.0" rotation="0.0"/>
-         </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceAutoFeeder" id="autofeeder1" name="auto_id1_8mm" enabled="false" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" retry-count="3" actuator-name="AutoFeeder_4mmAdvance" actuator-type="Double" actuator-value="10.0" post-pick-actuator-name="AutoFeeder_PostPick" post-pick-actuator-type="Double" post-pick-actuator-value="10.0">
-            <location units="Millimeters" x="112.58" y="83.43" z="-13.0" rotation="0.0"/>
-         </feeder>
+<feeder class="org.openpnp.machine.reference.feeder.ReferenceAutoFeeder" id="autofeeder0" name="auto_id0_8mm" enabled="false" part-id="R0805" retry-count="3" actuator-name="AutoFeeder_4mmAdvance" actuator-type="Double" actuator-value="0.0" post-pick-actuator-name="AutoFeeder_PostPick" post-pick-actuator-type="Double" post-pick-actuator-value="0.0">
+</feeder>
+<feeder class="org.openpnp.machine.reference.feeder.ReferenceAutoFeeder" id="autofeeder1" name="auto_id1_8mm" enabled="false" part-id="R0603-1K" retry-count="3" actuator-name="AutoFeeder_4mmAdvance" actuator-type="Double" actuator-value="1.0" post-pick-actuator-name="AutoFeeder_PostPick" post-pick-actuator-type="Double" post-pick-actuator-value="1">
+</feeder>
          <feeder class="org.openpnp.machine.reference.feeder.ReferenceTrayFeeder" id="FDR1531239808825" name="TQFP64-feeder" enabled="false" part-id="TQFP64-STM32F405RGTx" retry-count="3" tray-count-x="10" tray-count-y="1" feed-count="1">
             <location units="Millimeters" x="112.58" y="83.43" z="-13.0" rotation="0.0"/>
             <offsets units="Millimeters" x="0.001" y="0.001" z="0.0" rotation="0.0"/>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1612721550731" name="D-S1J-feeder" enabled="false" part-id="D_SMA-S1J" retry-count="3">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1612721550731" name="D-S1J-feeder" enabled="true" part-id="D_SMA-S1J" retry-count="3">
             <location units="Millimeters" x="176.356" y="62.586" z="-15.0" rotation="180.0"/>
             <pipeline>
                <stages>
@@ -156,7 +164,7 @@
                </stages>
             </pipeline>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1612978488170" name="D-BC817-feeder" enabled="false" part-id="SOT-23-BC817" retry-count="3">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1612978488170" name="D-BC817-feeder" enabled="true" part-id="SOT-23-BC817" retry-count="3">
             <location units="Millimeters" x="224.356" y="62.586" z="-15.0" rotation="0.0"/>
             <pipeline>
                <stages>
@@ -245,7 +253,7 @@
                </stages>
             </training-pipeline>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394028581" name="R-1k" enabled="false" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-1k" retry-count="3">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394028581" name="R-1k" enabled="true" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-1k" retry-count="3">
             <location units="Millimeters" x="274.356" y="62.586" z="-16.0" rotation="90.0"/>
             <pipeline>
                <stages>
@@ -277,7 +285,7 @@
                </stages>
             </pipeline>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394144447" name="R-510" enabled="false" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-510" retry-count="3">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394144447" name="R-510" enabled="true" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-510" retry-count="3">
             <location units="Millimeters" x="178.356" y="36.586" z="-16.0" rotation="90.0"/>
             <pipeline>
                <stages>
@@ -309,7 +317,7 @@
                </stages>
             </pipeline>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394307574" name="D-LED" enabled="false" part-id="LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder-LED_Small" retry-count="3">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394307574" name="D-LED" enabled="true" part-id="LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder-LED_Small" retry-count="3">
             <location units="Millimeters" x="226.356" y="36.586" z="-15.0" rotation="-90.0"/>
             <pipeline>
                <stages>
@@ -341,7 +349,7 @@
                </stages>
             </pipeline>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394416731" name="R-10k" enabled="false" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" retry-count="3">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394416731" name="R-10k" enabled="true" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" retry-count="3">
             <location units="Millimeters" x="275.356" y="36.586" z="-16.0" rotation="90.0"/>
             <pipeline>
                <stages>
@@ -373,7 +381,7 @@
                </stages>
             </pipeline>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394667734" name="D-3V3" enabled="false" part-id="D_SOT-23_ANK-BZX84C3V3" retry-count="3">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394667734" name="D-3V3" enabled="true" part-id="D_SOT-23_ANK-BZX84C3V3" retry-count="3">
             <location units="Millimeters" x="177.356" y="10.586" z="-15.0" rotation="0.0"/>
             <pipeline>
                <stages>
@@ -405,7 +413,7 @@
                </stages>
             </pipeline>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394853313" name="R-47k" enabled="false" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-47k" retry-count="3">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1613394853313" name="R-47k" enabled="true" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-47k" retry-count="3">
             <location units="Millimeters" x="227.356" y="10.586" z="-16.0" rotation="90.0"/>
             <pipeline>
                <stages>
@@ -469,12 +477,6 @@
                </stages>
             </pipeline>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceAutoFeeder" id="FDR1614705639520" name="auto_id2_8mm" enabled="false" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" retry-count="3" actuator-name="AutoFeeder_4mmAdvance" actuator-type="Double" actuator-value="8.0" post-pick-actuator-name="AutoFeeder_PostPick" post-pick-actuator-type="Double" post-pick-actuator-value="11.0">
-            <location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
-         </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceAutoFeeder" id="FDR1614799343612" name="auto_id3_8mm" enabled="false" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" retry-count="3" actuator-name="AutoFeeder_4mmAdvance" actuator-type="Double" actuator-value="12.0" post-pick-actuator-name="AutoFeeder_PostPick" post-pick-actuator-type="Double" post-pick-actuator-value="12.0">
-            <location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
-         </feeder>
       </feeders>
       <cameras>
          <camera class="org.openpnp.machine.reference.camera.OpenPnpCaptureCamera" id="CAM1611515597469" name="OpenPnpCaptureCamera" looking="Up" settle-time-ms="250" rotation="0.0" flip-x="false" flip-y="false" offset-x="0" offset-y="0" crop-width="0" crop-height="0" scale-width="0" scale-height="0" deinterlace="false" unique-id="USB 2.0 Camera: HD USB Camera usb-0000:00:14.0-6" format-id="3" fps="10.0">
@@ -503,26 +505,6 @@
       </cameras>
       <actuators>
          <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="ACT1546870129022" name="UpCamLights" index="0">
-            <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
-            <safe-z value="0.0" units="Millimeters"/>
-         </actuator>
-         <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="actAutoFeeder4mm" name="AutoFeeder_4mmAdvance" index="0">
-            <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
-            <safe-z value="0.0" units="Millimeters"/>
-         </actuator>
-         <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="actAutoFeeder8mm" name="AutoFeeder_8mmAdvance" index="1">
-            <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
-            <safe-z value="0.0" units="Millimeters"/>
-         </actuator>
-         <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="actAutoFeeder12mm" name="AutoFeeder_12mmAdvance" index="2">
-            <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
-            <safe-z value="0.0" units="Millimeters"/>
-         </actuator>
-         <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="actAutoFeederPostPick" name="AutoFeeder_PostPick" index="3">
-            <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
-            <safe-z value="0.0" units="Millimeters"/>
-         </actuator>
-         <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="actAutoFeederEnable" name="AutoFeeder_Enable" index="4">
             <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
             <safe-z value="0.0" units="Millimeters"/>
          </actuator>
@@ -2129,7 +2111,15 @@
       </part-alignments>
       <discard-location units="Millimeters" x="169.856" y="31.586" z="-15.0" rotation="0.0"/>
       <properties/>
-      <driver class="org.openpnp.machine.reference.driver.GcodeDriver" communications="serial" connection-keep-alive="true" units="Millimeters" max-feed-rate="10000" backlash-offset-x="0.0" backlash-offset-y="0.0" non-squareness-factor="0.0" backlash-feed-rate-factor="0.0" timeout-milliseconds="5000" connect-wait-time-milliseconds="3000" visual-homing-enabled="false" name="SmoothieGcodeDriver">
+<gcode-driver port-name="COM15" baud="115200" flow-control="Off" data-bits="Eight" stop-bits="One" parity="None" set-dtr="false" set-rts="false" units="Millimeters" max-feed-rate="1000" backlash-offset-x="-1.0" backlash-offset-y="-1.0" non-squareness-factor="0.0" backlash-feed-rate-factor="0.1" timeout-milliseconds="10000" connect-wait-time-milliseconds="1000" visual-homing-enabled="false" name="0816 feeder controller">
+  <command type="COMMAND_CONFIRM_REGEX">
+    <text><![CDATA[^ok.*]]></text>
+  </command>
+  <command type="COMMAND_ERROR_REGEX">
+    <text><![CDATA[^error.*]]></text>
+  </command>
+</gcode-driver>
+      <driver class="org.openpnp.machine.reference.driver.GcodeDriver" communications="serial" connection-keep-alive="true" units="Millimeters" max-feed-rate="10000" backlash-offset-x="0.0" backlash-offset-y="0.0" non-squareness-factor="0.0" backlash-feed-rate-factor="0.0" timeout-milliseconds="5000" connect-wait-time-milliseconds="3000" visual-homing-enabled="false" name="GcodeDriver">
          <serial line-ending-type="LF" port-name="/dev/ttyACM0" baud="115200" flow-control="Off" data-bits="Eight" stop-bits="One" parity="None" set-dtr="false" set-rts="false" name="SerialPortCommunications"/>
          <tcp line-ending-type="LF" ip-address="127.0.0.1" port="23" name="TcpCommunications"/>
          <homing-fiducial-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
@@ -2221,42 +2211,22 @@
          <command head-mountable-id="ACT1546870129022" type="ACTUATE_BOOLEAN_COMMAND">
             <text><![CDATA[{True:M810}{False:M811}]]></text>
          </command>
-         <command head-mountable-id="ACT1615654949295" type="ACTUATOR_READ_COMMAND">
-            <text><![CDATA[M105 ; read all temperatures and vacuum levels]]></text>
-         </command>
-         <command head-mountable-id="ACT1615654949295" type="ACTUATOR_READ_REGEX">
-            <text><![CDATA[^ok.*B:(?<Value>-?\d+\.\d+).*]]></text>
-         </command>
-         <sub-drivers class="java.util.ArrayList">
-            <gcode-driver communications="serial" connection-keep-alive="true" units="Millimeters" max-feed-rate="1000" backlash-offset-x="-1.0" backlash-offset-y="-1.0" non-squareness-factor="0.0" backlash-feed-rate-factor="0.1" timeout-milliseconds="5000" connect-wait-time-milliseconds="3000" visual-homing-enabled="true" name="AutoFeederDriver">
-               <serial line-ending-type="LF" port-name="ttyUSB0" baud="115200" flow-control="Off" data-bits="Eight" stop-bits="One" parity="None" set-dtr="false" set-rts="false" name="SerialPortCommunications"/>
-               <tcp line-ending-type="LF" ip-address="127.0.0.1" port="23" name="TcpCommunications"/>
-               <homing-fiducial-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
-               <command type="COMMAND_CONFIRM_REGEX">
-                  <text><![CDATA[^ok.*]]></text>
-               </command>
-               <command type="COMMAND_ERROR_REGEX">
-                  <text><![CDATA[^error.*]]></text>
-               </command>
-               <command head-mountable-id="actAutoFeeder4mm" type="ACTUATE_DOUBLE_COMMAND">
-                  <text><![CDATA[M600 N{IntegerValue} F4  X1 ; feeder N0 advance tape 4mm ignoring errors]]></text>
-               </command>
-               <command head-mountable-id="actAutoFeeder8mm" type="ACTUATE_DOUBLE_COMMAND">
-                  <text><![CDATA[M600 N{IntegerValue} F8 ; feeder N0 advance tape 4mm ignoring errors]]></text>
-               </command>
-               <command head-mountable-id="actAutoFeeder12mm" type="ACTUATE_DOUBLE_COMMAND">
-                  <text><![CDATA[M600 N{IntegerValue} F12 ; feeder N0 advance tape 4mm ignoring errors]]></text>
-               </command>
-               <command head-mountable-id="actAutoFeederPostPick" type="ACTUATE_DOUBLE_COMMAND">
-                  <text><![CDATA[M601 N{IntegerValue} ; retract advancing lever (next time feed is faster, this command is a post-pick command)]]></text>
-               </command>
-               <command head-mountable-id="actAutoFeederEnable" type="ACTUATE_BOOLEAN_COMMAND">
-                  <text><![CDATA[M610 S{True:1}{False:0}]]></text>
-               </command>
-               <sub-drivers class="java.util.ArrayList"/>
-               <axes class="java.util.ArrayList"/>
-            </gcode-driver>
-         </sub-drivers>
+ <command head-mountable-id="actAutoFeeder4mm" type="ACTUATE_DOUBLE_COMMAND">
+  <text><![CDATA[M600 N{IntegerValue} F4]]></text>
+</command>
+<command head-mountable-id="actAutoFeeder8mm" type="ACTUATE_DOUBLE_COMMAND">
+  <text><![CDATA[M600 N{IntegerValue} F8]]></text>
+</command>
+<command head-mountable-id="actAutoFeeder12mm" type="ACTUATE_DOUBLE_COMMAND">
+  <text><![CDATA[M600 N{IntegerValue} F12]]></text>
+</command>
+<command head-mountable-id="actAutoFeederPostPick" type="ACTUATE_DOUBLE_COMMAND">
+  <text><![CDATA[M601 N{IntegerValue}]]></text>
+</command>
+<command head-mountable-id="actAutoFeederEnable" type="ACTUATE_BOOLEAN_COMMAND">
+  <text><![CDATA[M610 S{True:1}{False:0}]]></text>
+</command>
+         <sub-drivers class="java.util.ArrayList"/>
          <axes class="java.util.ArrayList">
             <axis name="x" type="X" home-coordinate="0.0">
                <head-mountable-ids class="java.util.HashSet">

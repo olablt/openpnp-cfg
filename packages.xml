@@ -2,4 +2,24 @@
    <package version="1.1" id="TQFP64">
       <footprint units="Millimeters" body-width="10.0" body-height="10.0"/>
    </package>
+   <package version="1.1" id="Fiducial_0.5mm_Mask1.5mm">
+      <footprint units="Millimeters" body-width="0.0" body-height="0.0">
+         <pad name="1" x="0.0" y="0.0" width="0.5" height="0.5" rotation="0.0" roundness="100.0"/>
+      </footprint>
+   </package>
+   <package version="1.1" id="LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder">
+      <footprint units="Millimeters" body-width="0.0" body-height="0.0"/>
+   </package>
+   <package version="1.1" id="D_SMA">
+      <footprint units="Millimeters" body-width="3.0" body-height="4.0"/>
+   </package>
+   <package version="1.1" id="D_SOT-23_ANK">
+      <footprint units="Millimeters" body-width="0.0" body-height="0.0"/>
+   </package>
+   <package version="1.1" id="SOT-23">
+      <footprint units="Millimeters" body-width="0.0" body-height="0.0"/>
+   </package>
+   <package version="1.1" id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder">
+      <footprint units="Millimeters" body-width="0.0" body-height="0.0"/>
+   </package>
 </openpnp-packages>

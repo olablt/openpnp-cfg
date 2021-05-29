@@ -1,3 +1,12 @@
 <openpnp-parts>
    <part id="TQFP64-STM32F405RGTx" height-units="Millimeters" height="1.0" package-id="TQFP64" speed="0.2"/>
+   <part id="Fiducial_0.5mm_Mask1.5mm-Fiducial_0.5mm_Mask1.5mm" height-units="Millimeters" height="0.0" package-id="Fiducial_0.5mm_Mask1.5mm" speed="1.0"/>
+   <part id="LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder-LED_Small" height-units="Millimeters" height="1.0" package-id="LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" speed="1.0"/>
+   <part id="D_SMA-S1J" height-units="Millimeters" height="2.0" package-id="D_SMA" speed="1.0"/>
+   <part id="D_SOT-23_ANK-BZX84C3V3" height-units="Millimeters" height="0.5" package-id="D_SOT-23_ANK" speed="1.0"/>
+   <part id="SOT-23-BC817" height-units="Millimeters" height="0.5" package-id="SOT-23" speed="1.0"/>
+   <part id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-1k" height-units="Millimeters" height="0.5" package-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" speed="1.0"/>
+   <part id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-510" height-units="Millimeters" height="0.5" package-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" speed="1.0"/>
+   <part id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" height-units="Millimeters" height="0.1" package-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" speed="1.0"/>
+   <part id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-47k" height-units="Millimeters" height="0.5" package-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" speed="1.0"/>
 </openpnp-parts>
