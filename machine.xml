@@ -93,7 +93,7 @@
                   <back-light-compensation property="BackLightCompensation" value="0"/>
                   <brightness property="Brightness" value="152"/>
                   <contrast property="Contrast" value="66"/>
-                  <exposure property="Exposure" value="242" auto="false"/>
+                  <exposure property="Exposure" value="247" auto="false"/>
                   <focus property="Focus"/>
                   <gain property="Gain"/>
                   <gamma property="Gamma"/>
@@ -101,7 +101,7 @@
                   <power-line-frequency property="PowerLineFrequency" value="1"/>
                   <saturation property="Saturation" value="60"/>
                   <sharpness property="Sharpness" value="3"/>
-                  <white-balance property="WhiteBalance" value="2610" auto="true"/>
+                  <white-balance property="WhiteBalance" value="1070" auto="true"/>
                   <zoom property="Zoom"/>
                </camera>
             </cameras>
@@ -117,14 +117,14 @@
          <feeder class="org.openpnp.machine.reference.feeder.ReferenceAutoFeeder" id="autofeeder0" name="auto-R-10k" enabled="true" part-id="R_0805_2012Metric_Pad1.20x1.40mm_HandSolder-10k" retry-count="3" actuator-name="AutoFeeder_4mmAdvance" actuator-type="Double" actuator-value="4.0" post-pick-actuator-name="AutoFeeder_PostPick" post-pick-actuator-type="Double" post-pick-actuator-value="4.0">
             <location units="Millimeters" x="77.4" y="-7.9" z="-19.5" rotation="0.0"/>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceAutoFeeder" id="autofeeder1" name="auto-D-S1J" enabled="false" part-id="D_SMA-S1J" retry-count="3" actuator-name="AutoFeeder_4mmAdvance" actuator-type="Double" actuator-value="5.0" post-pick-actuator-name="AutoFeeder_PostPick" post-pick-actuator-type="Double" post-pick-actuator-value="5.0">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferenceAutoFeeder" id="autofeeder1" name="auto-D-S1J" enabled="true" part-id="D_SMA-S1J" retry-count="3" actuator-name="AutoFeeder_4mmAdvance" actuator-type="Double" actuator-value="5.0" post-pick-actuator-name="AutoFeeder_PostPick" post-pick-actuator-type="Double" post-pick-actuator-value="5.0">
             <location units="Millimeters" x="53.8" y="-7.7" z="-19.3" rotation="0.0"/>
          </feeder>
          <feeder class="org.openpnp.machine.reference.feeder.ReferenceTrayFeeder" id="FDR1531239808825" name="TQFP64-feeder" enabled="false" part-id="TQFP64-STM32F405RGTx" retry-count="3" tray-count-x="10" tray-count-y="1" feed-count="1">
             <location units="Millimeters" x="112.58" y="83.43" z="-13.0" rotation="0.0"/>
             <offsets units="Millimeters" x="0.001" y="0.001" z="0.0" rotation="0.0"/>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1612721550731" name="D-S1J-feeder" enabled="true" part-id="D_SMA-S1J" retry-count="3">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferenceLoosePartFeeder" id="FDR1612721550731" name="D-S1J-feeder" enabled="false" part-id="D_SMA-S1J" retry-count="3">
             <location units="Millimeters" x="224.356" y="79.886" z="-15.0" rotation="180.0"/>
             <pipeline>
                <stages>
@@ -2141,9 +2141,9 @@
             </part-settings-by-part-id>
          </part-alignment>
       </part-alignments>
-      <discard-location units="Millimeters" x="169.856" y="31.586" z="-13.0" rotation="0.0"/>
+      <discard-location units="Millimeters" x="177.856" y="33.586" z="-13.0" rotation="0.0"/>
       <properties/>
-      <driver class="org.openpnp.machine.reference.driver.GcodeDriver" communications="serial" connection-keep-alive="true" units="Millimeters" max-feed-rate="10000" backlash-offset-x="0.0" backlash-offset-y="0.0" non-squareness-factor="0.0" backlash-feed-rate-factor="0.0" timeout-milliseconds="5000" connect-wait-time-milliseconds="3000" visual-homing-enabled="false" name="SmoothieGcodeDriver">
+      <driver class="org.openpnp.machine.reference.driver.GcodeDriver" communications="serial" connection-keep-alive="true" units="Millimeters" max-feed-rate="20000" backlash-offset-x="0.0" backlash-offset-y="0.0" non-squareness-factor="0.0" backlash-feed-rate-factor="0.0" timeout-milliseconds="5000" connect-wait-time-milliseconds="3000" visual-homing-enabled="false" name="SmoothieGcodeDriver">
          <serial line-ending-type="LF" port-name="/dev/ttyACM0" baud="115200" flow-control="Off" data-bits="Eight" stop-bits="One" parity="None" set-dtr="false" set-rts="false" name="SerialPortCommunications"/>
          <tcp line-ending-type="LF" ip-address="127.0.0.1" port="23" name="TcpCommunications"/>
          <homing-fiducial-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
@@ -2179,7 +2179,7 @@
          <command head-mountable-id="N1" type="PICK_COMMAND">
             <text><![CDATA[M803 ; nozzle 1 exhaust solenoid OFF]]></text>
             <text><![CDATA[M800 ; nozzle 1 vacuum solenoid ON]]></text>
-            <text><![CDATA[M808 ; vacuum pump ON]]></text>
+            <text><![CDATA[; M808 ; vacuum pump ON]]></text>
          </command>
          <command head-mountable-id="N2" type="PICK_COMMAND">
             <text><![CDATA[M803 ; nozzle 1 exhaust solenoid OFF]]></text>
@@ -2187,7 +2187,7 @@
             <text><![CDATA[M808 ; vacuum pump ON]]></text>
          </command>
          <command head-mountable-id="N1" type="PLACE_COMMAND">
-            <text><![CDATA[M809 ; vacuum pump OFF]]></text>
+            <text><![CDATA[; M809 ; vacuum pump OFF]]></text>
             <text><![CDATA[M801 ; nozzle 1 vacuum solenoid OFF]]></text>
             <text><![CDATA[M802 ; nozzle 1 exhaust solenoid ON]]></text>
             <text><![CDATA[G4 P250 ; pause for a given duration of time - 1 second, todo 250ms]]></text>
@@ -2219,10 +2219,10 @@
             <text><![CDATA[M811 ; camera LEDs off]]></text>
          </command>
          <command type="PUMP_ON_COMMAND">
-            <text><![CDATA[M808]]></text>
+            <text><![CDATA[; M808]]></text>
          </command>
          <command type="PUMP_OFF_COMMAND">
-            <text><![CDATA[M809]]></text>
+            <text><![CDATA[; M809]]></text>
          </command>
          <command head-mountable-id="N1" type="MOVE_TO_COMMAND">
             <text><![CDATA[G0 {X:X%.4f} {Y:Y%.4f} {Z:Z%.4f} {Rotation:A%.4f} F{FeedRate:%.0f} ; Send standard Gcode move]]></text>
